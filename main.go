@@ -84,6 +84,7 @@ func exportArtifacts(artifacts []gradle.Artifact, deployDir string) ([]string, e
 		}
 
 		paths = append(paths, filepath.Join(deployDir, artifact.Name))
+		logger.Warnf("PATHS: %s", paths)
 	}
 	return paths, nil
 }
